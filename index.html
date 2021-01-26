@@ -9,9 +9,21 @@
 </head>
 
 <body>
-
-
-
+    <div class="conatiner">
+        <h1 class="title">Spaceman</h1>
+        <div id="mistakes">Damage: <span id="damage-taken">0</span> of <span id="max-damage">6</span></div>
+        <div id="images">
+            <div id='space-background'> </div>
+            <div id="cockpit"> </div>
+            <div id="enemy-ship"></div>
+        </div>
+        <div id="insideCockpit">
+            <div id='wordGuessHud'>Guess word line</div>
+            <div id="controls"></div>
+            <div id="ShipDamageHud"></div>
+            <button class="btn btn-info" onclick="reset()">EJECT</button>
+        </div>
+    </div>
 
     <script src="./js/spacemane.js"></script>
 </body>
