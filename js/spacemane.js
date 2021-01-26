@@ -27,5 +27,15 @@ const wordsToGuess = [
     "PROTON",
     "THRUST",
     "URANUS",
-    "VOYAGE"
+    "VOYAGE",
+    "ZENITH"
 ]
+
+let theAnswer = '';
+let maxDamage = 6;
+let damageTaken = 0;
+let shots = [];
+let targetingStatus = null;
+
+
+const randomWord = () => { answer = wordsToGuess[Math.floor(Math.random() * wordsToGuess)] };
