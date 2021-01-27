@@ -62,6 +62,7 @@ function takeAShot(buttonPressed) {
     if (theAnswer.indexOf(buttonPressed) >= 0) {
         shotTaken();
         checkIfBattleWon();
+        updateEnemyShipPic();
     } else if (theAnswer.indexOf(buttonPressed) === -1) {
         damageTaken++
         checkIfBattleLost()
@@ -69,6 +70,9 @@ function takeAShot(buttonPressed) {
     }
 }
 
+function updateEnemyShipPic() {
+    document.getElementById('')
+}
 
 randomWord();
 buildConsole();
