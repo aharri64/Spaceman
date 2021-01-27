@@ -38,7 +38,7 @@ let shots = [];
 let targetingStatus = null;
 
 
-const randomWord = () => { answer = wordsToGuess[Math.floor(Math.random() * wordsToGuess.length)] };
+const randomWord = () => { theAnswer = wordsToGuess[Math.floor(Math.random() * wordsToGuess.length)] };
 
 
 
@@ -71,7 +71,19 @@ function takeAShot(buttonPressed) {
 }
 
 function updateEnemyShipPic() {
-    document.getElementById('')
+    document.getElementById('cockpit')
+}
+
+function checkIfBattleWon() {
+    if (targetingStatus === theAnswer) {
+        document.getElementById('controls').innerHTML = 'VICTORIOUS';
+    }
+}
+
+function checkIfBattleLost() {
+    if (damageTaken === maxDamage) {
+        document.getElementById('controls').innerHTML = 'Failure';
+    }
 }
 
 randomWord();
