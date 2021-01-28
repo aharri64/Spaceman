@@ -11,20 +11,18 @@
 <body>
     <div class="conatiner">
         <h1 class="title">Spaceman</h1>
-        <div id="damage">Damage: <span id="damage-taken">0</span> of <span id="max-damage">6</span></div>
+        <div id="damage">Damage: <span id="damage-taken">0</span> of <span id="max-damage"></span></div>
         <div id="images">
-            <img id='space-background'>
             <img id="cockpit" src="./img/Game-Start.png">
         </div>
         <div id="insideCockpit">
             <p id='wordGuessHud'>Guess word line</p>
             <div id="controls"></div>
-            <img id="ShipDamageHud">
-            <button class="btn btn-info" onclick="reset()">EJECT</button>
+            <button id="eject" onclick="reset()">EJECT</button>
         </div>
     </div>
 
-    <script src="./js/spacemane.js"></script>
+    <script src="./js/spaceman1.js"></script>
 </body>
 
 </html>
