@@ -30,7 +30,6 @@ h1 {
     display: inline-block;
     text-align: center;
     margin: 293px 0 0 220px;
-    /* z-index: 100; */
     color: white;
 
 }
@@ -51,7 +50,6 @@ h1 {
     outline: none;
     color: #fff;
     background-color: rgb(156, 205, 235);
-    /* border: none; */
     border-radius: 5px;
     box-shadow: 0 4px rgb(90, 119, 137); 
 }
@@ -99,8 +97,11 @@ h1 {
 }
 
 .theAnswerWas{
-    margin: 200 0 0 200;
-    color: blue;
+    color: blue !important;
+}
+
+.control-button.correct{
+    background-color: blue;
 }
 
 @media screen and (max-device-width: 500px) {

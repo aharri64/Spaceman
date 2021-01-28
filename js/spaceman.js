@@ -13,6 +13,7 @@ let wordGuessHud = document.getElementById('wordGuessHud')
 let damageReport = document.getElementById('damage-taken')
 let destroyed = document.getElementById('max-damage')
 
+
 function randomWord() {
     solution = wordsToGuess[Math.floor(Math.random() * wordsToGuess.length)];
     console.log(solution)
@@ -43,6 +44,7 @@ function takeAShot(chosenLetter) {
     if (solution.indexOf(chosenLetter) > -1) {
         targetedWord();
         checkIfBattleWon();
+        document.getElementById(chosenLetter).classList.toggle('correct')
     } else {
         damageTaken++;
         damageReportUpdate();
@@ -95,6 +97,8 @@ function eject() {
     targetedWord();
     damageReportUpdate();
     generateConsole();
+    controls.classList.toggle('youLost')
+    wordGuessHud.classList.remove('theAnswerWas')
 }
 
 destroyed.innerHTML = maxDamage;
