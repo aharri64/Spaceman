@@ -68,7 +68,7 @@ function generateConsole() {
 function takeAShot(chosenLetter) {
     if (shots.indexOf(chosenLetter) === -1) {
         shots.push(chosenLetter)
-        document.getElementById(chosenLetter).setAttribute('disabled', true);
+        // document.getElementById(chosenLetter).setAttribute('disabled', true);
     }
     if (solution.indexOf(chosenLetter) > -1) {
         targetedWord();
