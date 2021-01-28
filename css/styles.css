@@ -94,6 +94,15 @@ h1 {
     transform: translateY(4px);
 }
 
+.youLost{
+    color: white;
+}
+
+.theAnswerWas{
+    margin: 200 0 0 200;
+    color: blue;
+}
+
 @media screen and (max-device-width: 500px) {
     #inside-game {
         width: 350px;

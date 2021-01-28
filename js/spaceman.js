@@ -51,6 +51,10 @@ function takeAShot(chosenLetter) {
     }
 }
 
+function corretAnswer() {
+
+}
+
 function shipImage() {
     cockpit.src = './img/Damage' + damageTaken + '.png';
 }
@@ -63,9 +67,12 @@ function checkIfBattleWon() {
 
 function checkIfBattleLost() {
     if (damageTaken === maxDamage) {
-        wordGuessHud.innerHTML = 'The solution was: ' + solution;
+        wordGuessHud.innerHTML = (solution)
+
         controls.innerHTML = 'You Lost!!!';
+        controls.classList.add('youLost')
         cockpit.src = './img/GameOver.png';
+        wordGuessHud.classList.add('theAnswerWas')
     }
 }
 
