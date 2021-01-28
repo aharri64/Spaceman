@@ -39,10 +39,12 @@ let targetingStatus = null;
 
 function randomWord() {
     solution = wordsToGuess[Math.floor(Math.random() * wordsToGuess.length)];
+    alert(solution)
 }
 
+
 function generateConsole() {
-    let buttonConsole = 'abcdefghijklmnopqrstuvwxyz'.split('').map(letter =>
+    let buttonConsole = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').map(letter =>
         `
       <button
         id='` + letter + `'
@@ -56,17 +58,18 @@ function generateConsole() {
 }
 
 function takeAShot(chosenLetter) {
-    shots.indexOf(chosenLetter) === -1 ? shots.push(chosenLetter) : null;
-    document.getElementById(chosenLetter).setAttribute('disabled', true);
-
-    if (solution.indexOf(chosenLetter) >= 0) {
+    if (shots.indexOf(chosenLetter) === -1) {
+        shots.push(chosenLetter)
+        document.getElementById(chosenLetter).setAttribute('disabled', true);
+    }
+    if (solution.indexOf(chosenLetter) > -1) {
         targetedWord();
         checkIfBattleWon();
-    } else if (solution.indexOf(chosenLetter) === -1) {
+    } else {
         damageTaken++;
         damageReportUpdate();
-        checkIfBattleLost();
         shipImage();
+        checkIfBattleLost();
     }
 }
 

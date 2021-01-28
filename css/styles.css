@@ -1,6 +1,39 @@
+h1 {
+    text-align: center;
+}
+
+#inside-game {
+     position: relative;
+     display: block;
+     margin: auto;
+     width: 500px;
+     height: 500px;
+}
+
 #cockpit {
+    /* position: relative; */
     display: block;
     margin: auto;
     width: 500px;
     height: 500px;
+}
+
+#damage {
+    position: absolute;
+    color: white;
+    margin-left: 80%;
+}
+
+#wordGuessHud {
+    /* position: absolute; */
+    /* color: white; */
+    
+}
+
+#controls {
+    /* position: absolute; */
+}
+
+#eject {
+    /* position: absolute; */
 }
