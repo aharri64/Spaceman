@@ -9,18 +9,22 @@
 </head>
 
 <body>
-    <div class="conatiner">
+    <div class="container">
         <h1>Spaceman</h1>
-        <!-- <div id="damage">Damage: <span id="damage-taken">0</span> of <span id="max-damage"></span></div> -->
+
         <div id="inside-game">
+            <p id='wordGuessHud'>Guess word line</p>
+            <button id="eject" onclick="eject()">EJECT</button>
+            <div id="controls"></div>
+
             <div id="damage">Damage: <span id="damage-taken">0</span> of <span id="max-damage"></span></div>
             <img id="cockpit" src="./img/Game-Start.png">
             <!-- <p id='wordGuessHud'>Guess word line</p> -->
             <!-- </div> -->
             <div id="insideCockpit">
-                <p id='wordGuessHud'>Guess word line</p>
-                <div id="controls"></div>
-                <button id="eject" onclick="reset()">EJECT</button>
+                <!-- <p id='wordGuessHud'>Guess word line</p> -->
+                <!-- <div id="controls"></div> -->
+                <!-- <button id="eject" onclick="reset()">EJECT</button> -->
             </div>
         </div>
     </div>

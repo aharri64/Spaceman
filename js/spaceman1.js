@@ -37,9 +37,15 @@ let damageTaken = 0;
 let shots = [];
 let targetingStatus = null;
 
+let controls = document.getElementById('controls')
+let cockpit = document.getElementById('cockpit')
+let wordGuessHud = document.getElementById('wordGuessHud')
+let damageReport = document.getElementById('damage-taken')
+let destroyed = document.getElementById('max-damage')
+
 function randomWord() {
     solution = wordsToGuess[Math.floor(Math.random() * wordsToGuess.length)];
-    alert(solution)
+    console.log(solution)
 }
 
 
@@ -47,14 +53,16 @@ function generateConsole() {
     let buttonConsole = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').map(letter =>
         `
       <button
+        class = 'control-button'
         id='` + letter + `'
         onClick="takeAShot('` + letter + `')"
+        
       >
         ` + letter + `
       </button>
     `).join('');
 
-    document.getElementById('controls').innerHTML = buttonConsole;
+    controls.innerHTML = buttonConsole;
 }
 
 function takeAShot(chosenLetter) {
@@ -74,37 +82,37 @@ function takeAShot(chosenLetter) {
 }
 
 function shipImage() {
-    document.getElementById('cockpit').src = './img/Damage' + damageTaken + '.png';
+    cockpit.src = './img/Damage' + damageTaken + '.png';
 }
 
 function checkIfBattleWon() {
     if (targetingStatus === solution) {
-        document.getElementById('controls').innerHTML = 'You Won!!!';
+        controls.innerHTML = 'You Won!!!';
     }
 }
 
 function checkIfBattleLost() {
     if (damageTaken === maxDamage) {
-        document.getElementById('wordGuessHud').innerHTML = 'The solution was: ' + solution;
-        document.getElementById('controls').innerHTML = 'You Lost!!!';
-        document.getElementById('cockpit').src = './img/GameOver.png';
+        wordGuessHud.innerHTML = 'The solution was: ' + solution;
+        controls.innerHTML = 'You Lost!!!';
+        cockpit.src = './img/GameOver.png';
     }
 }
 
 function targetedWord() {
     targetingStatus = solution.split('').map(letter => (shots.indexOf(letter) >= 0 ? letter : " _ ")).join('');
 
-    document.getElementById('wordGuessHud').innerHTML = targetingStatus;
+    wordGuessHud.innerHTML = targetingStatus;
 }
 
 function damageReportUpdate() {
-    document.getElementById('damage-taken').innerHTML = damageTaken;
+    damageReport.innerHTML = damageTaken;
 }
 
-function reset() {
+function eject() {
     damageTaken = 0;
     shots = [];
-    document.getElementById('cockpit').src = './img/Game-Start.png';
+    cockpit.src = './img/Game-Start.png';
 
     randomWord();
     targetedWord();
@@ -112,7 +120,7 @@ function reset() {
     generateConsole();
 }
 
-document.getElementById('max-damage').innerHTML = maxDamage;
+destroyed.innerHTML = maxDamage;
 
 randomWord();
 generateConsole();
