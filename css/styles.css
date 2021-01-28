@@ -96,95 +96,36 @@ h1 {
 
 @media screen and (max-device-width: 500px) {
     #inside-game {
-        position: relative;
-        display: block;
-        margin: auto;
         width: 350px;
-        height: 350px;
+        height: 400px;
    }
 
    #cockpit {
-        /* position: relative; */
-        display: block;
-        margin: auto;
         width: 350px;
-        height: 350px;
+        height: 400px;
     }
 
     #damage {
-        position: absolute;
-        color: white;
         margin-left: 70%;
     }
     
     #wordGuessHud {
-        position: absolute;
-        display: inline-block;
-        text-align: center;
-        margin: 200px 0 0 143px;
-        /* z-index: 100; */
-        color: white;
-    
+        margin: 235px 0 0 143px;
     }
     
     #controls {
-        position: absolute;
-        width: 50%;
-        text-align: center;
-        margin-top: 235px;
-        margin-left: 83px;
-        display: inline-block;
+        width: 45%;
+        margin-top: 270px;
+        margin-left: 90px;
         padding: 10px 10px;
         font-size: 9px;
-        text-align: center;
     }
-    
-    .control-button {
-        outline: none;
-        color: #fff;
-        background-color: rgb(156, 205, 235);
-        /* border: none; */
-        border-radius: 3px;
-        box-shadow: 0 4px rgb(90, 119, 137); 
-    }
-    
-    .control-button:active {
-        background-color: #2be831;
-        box-shadow: 0 5px #167819;
-        transform: translateY(2px);
-    }
-    
-    .control-button:disabled {
-        opacity: 75%;
-        background-color: red;
-    }
-    
-    /* Found on w3 makes the buttons active */
-    
-    
     
     #eject {
-        position: absolute;
-        display: inline-block;
-        margin: 430px 0 0 16px;
-        font-size: 15px;
-        padding: 15px 25px;
-        cursor: pointer;
-        text-align: center;
-        text-decoration: none;
-        outline: none;
-        color: #fff;
-        background-color: red;
-        border: none;
-        border-radius: 15px;
-        box-shadow: 0 9px darkred;
-    }
-    
-    #eject:active {
-        background-color: darkred;
-        box-shadow: 0 5px darkslategrey;
-        transform: translateY(4px);
-    }
+        margin: 347px 0 0 15px;
+        font-size: 10px;
+        padding: 10px 15px;
+
 }
 
 
