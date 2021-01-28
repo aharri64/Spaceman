@@ -1,34 +1,4 @@
-let wordsToGuess = [
-    "SYSTEM",
-    "APOLLO",
-    "COSMOS",
-    "BEYOND",
-    "ALIENS",
-    "AURORA",
-    "BINARY",
-    "CORONA",
-    "CRATER",
-    "COSMIC",
-    "PLANET",
-    "COMETS",
-    "GALAXY",
-    "GLOBAL",
-    "HAZARD",
-    "METEOR",
-    "MODULE",
-    "NEBULA",
-    "NEWTON",
-    "ORIGIN",
-    "PROBES",
-    "QUASAR",
-    "PULSAR",
-    "ROCKET",
-    "PHASER",
-    "PROTON",
-    "THRUST",
-    "URANUS",
-    "VOYAGE",
-    "ZENITH"
+let wordsToGuess = ["SYSTEM", "APOLLO", "COSMOS", "BEYOND", "ALIENS", "AURORA", "BINARY", "CORONA", "CRATER", "COSMIC", "PLANET", "COMETS", "GALAXY", "GLOBAL", "HAZARD", "METEOR", "MODULE", "NEBULA", "NEWTON", "ORIGIN", "PROBES", "QUASAR", "PULSAR", "ROCKET", "PHASER", "PROTON", "THRUST", "URANUS", "VOYAGE", "ZENITH", "COSMIC", "SATURN"
 ]
 
 let solution = '';
@@ -68,7 +38,7 @@ function generateConsole() {
 function takeAShot(chosenLetter) {
     if (shots.indexOf(chosenLetter) === -1) {
         shots.push(chosenLetter)
-        // document.getElementById(chosenLetter).setAttribute('disabled', true);
+        document.getElementById(chosenLetter).setAttribute('disabled', true);
     }
     if (solution.indexOf(chosenLetter) > -1) {
         targetedWord();

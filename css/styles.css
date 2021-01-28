@@ -27,9 +27,9 @@ h1 {
 #wordGuessHud {
     position: absolute;
     display: inline-block;
-    margin-top: 50%;
-    margin-left: 50%; 
-    z-index: 100;
+    text-align: center;
+    margin: 293px 0 0 220px;
+    /* z-index: 100; */
     color: white;
 
 }
