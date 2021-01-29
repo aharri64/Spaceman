@@ -44,7 +44,11 @@ function takeAShot(chosenLetter) {
     if (solution.indexOf(chosenLetter) > -1) {
         targetedWord();
         checkIfBattleWon();
-        document.getElementById(chosenLetter).classList.toggle('correct')
+        let letterChoice = document.getElementById(chosenLetter);
+        if (letterChoice !== null) {
+            letterChoice.classList.toggle('correct')
+
+        }
     } else {
         damageTaken++;
         damageReportUpdate();
@@ -63,7 +67,11 @@ function shipImage() {
 
 function checkIfBattleWon() {
     if (targetingStatus === solution) {
-        controls.innerHTML = 'You Won!!!';
+        controls.innerHTML = 'VICTORIOUS';
+        let enemyShip = document.createElement("IMG");
+        enemyShip.setAttribute('src', './img/explosion.png');
+        enemyShip.setAttribute('id', 'enemyShip');
+        document.getElementById('explode').appendChild(enemyShip);
     }
 }
 
@@ -71,7 +79,10 @@ function checkIfBattleLost() {
     if (damageTaken === maxDamage) {
         wordGuessHud.innerHTML = (solution)
 
-        controls.innerHTML = 'You Lost!!!';
+        let enemyShip = document.createElement("div");
+        enemyShip.setAttribute('id', 'enemyShip');
+        document.getElementById('explode').appendChild(enemyShip);
+        controls.innerHTML = "You've been sucked into space";
         controls.classList.add('youLost')
         cockpit.src = './img/GameOver.png';
         wordGuessHud.classList.add('theAnswerWas')
@@ -99,6 +110,7 @@ function eject() {
     generateConsole();
     controls.classList.toggle('youLost')
     wordGuessHud.classList.remove('theAnswerWas')
+    document.getElementById('enemyShip').remove()
 }
 
 destroyed.innerHTML = maxDamage;

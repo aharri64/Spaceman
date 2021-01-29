@@ -1,6 +1,9 @@
+
+
 h1 {
     text-align: center;
 }
+
 
 
 #inside-game {
@@ -31,7 +34,7 @@ h1 {
     text-align: center;
     margin: 293px 0 0 220px;
     color: white;
-
+    background-color: none;
 }
 
 #controls {
@@ -46,6 +49,14 @@ h1 {
     text-align: center;
 }
 
+#enemyShip {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    z-index: 100;
+    margin: 140px 0 0 195px;
+}
+
 .control-button {
     outline: none;
     color: #fff;
@@ -55,13 +66,13 @@ h1 {
 }
 
 .control-button:active {
-    background-color: #2be831;
+    background-color: #ddff00;
     box-shadow: 0 5px #167819;
     transform: translateY(2px);
 }
 
 .control-button:disabled {
-    opacity: 75%;
+    opacity: 95%;
     background-color: red;
 }
 
@@ -97,11 +108,11 @@ h1 {
 }
 
 .theAnswerWas{
-    color: blue !important;
+    color: white !important;
 }
 
 .control-button.correct{
-    background-color: blue;
+    background-color: rgb(75, 75, 250);
 }
 
 @media screen and (max-device-width: 500px) {
@@ -136,6 +147,7 @@ h1 {
         font-size: 10px;
         padding: 10px 15px;
 
+    }
 }
 
 
