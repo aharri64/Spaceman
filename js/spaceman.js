@@ -110,11 +110,13 @@ function eject() {
     generateConsole();
     controls.classList.toggle('youLost')
     wordGuessHud.classList.remove('theAnswerWas')
-    document.getElementById('enemyShip').remove()
+    if (document.getElementById('enemyShip') !== null) {
+        document.getElementById('enemyShip').remove()
+    }
+
+    destroyed.innerHTML = maxDamage;
+
+    randomWord();
+    generateConsole();
+    targetedWord();
 }
-
-destroyed.innerHTML = maxDamage;
-
-randomWord();
-generateConsole();
-targetedWord();

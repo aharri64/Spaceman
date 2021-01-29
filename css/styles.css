@@ -163,6 +163,12 @@ h1 {
         padding: 10px 15px;
 
     }
+
+    #enemyShip {
+        margin: 120px 0 0 135px;
+        height: 70px;
+        width: 70px;
+    }
 }
 
 
