@@ -1,9 +1,19 @@
-
+body {
+    background-image: url(../img/haz.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 h1 {
     text-align: center;
+    color: rgb(181, 4, 4);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 50px;
+    margin-top: 5px;
+    margin-bottom: 10px;
 }
-
 
 
 #inside-game {
@@ -116,6 +126,11 @@ h1 {
 }
 
 @media screen and (max-device-width: 500px) {
+    body{
+        background-image: none;
+        background-color: black;
+    }
+
     #inside-game {
         width: 350px;
         height: 400px;
